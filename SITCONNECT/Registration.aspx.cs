@@ -32,6 +32,14 @@ namespace SITCONNECT
 
         protected void btn_register_Click(object sender, EventArgs e)
         {
+            HttpUtility.HtmlEncode(tb_fname.Text);
+            HttpUtility.HtmlEncode(tb_lname.Text);
+            HttpUtility.HtmlEncode(tb_bdate.Text);
+            HttpUtility.HtmlEncode(tb_cardNo.Text);
+            HttpUtility.HtmlEncode(tb_expiryDate.Text);
+            HttpUtility.HtmlEncode(tb_cvc.Text);
+            HttpUtility.HtmlEncode(tb_email.Text);
+
             int scores = checkPassword(tb_pwd.Text);
             string status = "";
             switch (scores)

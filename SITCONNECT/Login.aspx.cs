@@ -28,6 +28,9 @@ namespace SITCONNECT
 
         protected void btn_login_Click(object sender, EventArgs e)
         {
+            HttpUtility.HtmlEncode(tb_email.Text);
+            HttpUtility.HtmlEncode(tb_pwd.Text);
+
             string email = tb_email.Text.ToString().Trim();
             string pwd = tb_pwd.Text.ToString().Trim();
 
@@ -203,7 +206,7 @@ namespace SITCONNECT
             string captchaResponse = Request.Form["g-recaptcha-response"];
 
             //To send a GET request to Google along with the response and Secret key.
-            HttpWebRequest req = (HttpWebRequest)WebRequest.Create("https://www.google.com/recaptcha/api/siteverify?secret=6LcHEegZAAAAAH4zibsF3b2jdTTLtNg_cSJ4Mp3t &response=" + captchaResponse);
+            HttpWebRequest req = (HttpWebRequest)WebRequest.Create(" &response=" + captchaResponse);
 
             try
             {
