@@ -76,7 +76,7 @@ namespace SITCONNECT
 
                     if (Email.Equals(email))
                     {
-                        lbl_email.Text = Email + email;
+                        //lbl_email.Text = Email + email;
                     //    RNGCryptoServiceProvider rng = new RNGCryptoServiceProvider();
                     //    byte[] saltByte = new byte[8];
 
